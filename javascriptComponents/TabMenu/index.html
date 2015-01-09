@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+  <div class="tabMenu">
+    <ul class="titBox">
+      <li>文档上传列表</li>
+      <li>智囊创建列表</li>
+    </ul>
+    <ul class="byBox">
+      <li>
+        boxA
+      </li>
+      <li>
+        boxB
+      </li>
+    </ul>
+  </div>
+
+  <br />
+
+  <div class="tabMenu">
+    <ul class="titBox">
+      <li>文档上传列表</li>
+      <li>智囊创建列表</li>
+    </ul>
+    <ul class="byBox">
+      <li>
+        boxA
+      </li>
+      <li>
+        boxB
+      </li>
+    </ul>
+  </div>
+  
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script src="js/yss.js"></script>
+  <script>
+    $('.tabMenu').tabMenu({
+      fn: function (a, b, c) {
+        // console.log($(this).data('tabPage'), a, b, c)
+      },
+      arg: [3, 25, 12]
+    });
+  </script>
+
+</body>
+</html>

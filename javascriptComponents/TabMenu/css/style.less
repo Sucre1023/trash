@@ -1,0 +1,39 @@
+@import "reset.less";
+
+body {
+  font: 16px/1.5 "Helvetica Neue", Helvetica, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+}
+a {
+  color: #00B7FF; text-decoration: none;
+}
+
+
+.tabMenu {
+  border: 1px solid red;
+  > ul {
+    overflow: hidden;
+    > li {
+      border-right: 1px solid red;
+    }
+  }
+  > .titBox {
+    margin-bottom: -1px; position: relative; z-index: 1;
+    > li {
+      float: left; height: 40px; line-height: 40px; font-size: 14px;
+      border-bottom: 1px solid red; cursor: pointer; padding: 0 10px;
+      transition: .6s;
+    }
+    > li.action {
+      background: #eee;
+      border-bottom-color: #fff; cursor: default;
+    }
+  }
+  > .byBox {
+    > li {
+      width: 100%; border-top: 1px solid red; display: none;
+    }
+    > li.action {
+      display: block;
+    }
+  }
+}
