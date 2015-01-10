@@ -13,19 +13,19 @@ var TabMenu = function (box, opt) {
         arg: {} /* 回调函数的参数 */
       };
   opt = $.extend({}, defOpt, opt);
-  me._init(box, opt);
+  me.init(box, opt);
 
   /* 绑定事件 */
-  this._tClick();
+  this.tClick();
 
   /* 自定义设置接口 */
-  return function (optc) {
+  return box.tabMenu = function (optc) {
     opt = $.extend({}, opt, optc);
-    me._init(box, opt);
+    me.init(box, opt);
   };
 }
 
-TabMenu.prototype._init = function (box, opt) {
+TabMenu.prototype.init = function (box, opt) {
   var $box = $(box);
   
   this.$ts = $box.find(opt.ts);
@@ -39,7 +39,7 @@ TabMenu.prototype._init = function (box, opt) {
   });
 }
 
-TabMenu.prototype._tClick = function () {
+TabMenu.prototype.tClick = function () {
   var me = this;
   this.$ts.on('click', function () {
     var $this = $(this);
@@ -60,7 +60,7 @@ $.fn.tabMenu = function (opt) {
   var i;
   this.each(function (opt) {
     if (!this.tabMenu) {
-      this.tabMenu = new TabMenu(this, opt);
+      new TabMenu(this, opt);
     } else {
       this.tabMenu(opt);
     }
@@ -68,4 +68,4 @@ $.fn.tabMenu = function (opt) {
   return this;
 }
 
-})(jQuery);
+})(window.jQuery || window.Zepto);
