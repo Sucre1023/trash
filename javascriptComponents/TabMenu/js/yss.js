@@ -5,7 +5,7 @@
 var TabMenu = function (box, opt) {
   if (box.tabMenu) return;
 
-  var i, me = this,
+  var me = this,
       defOpt = {
         ts: '>.titBox>li', /* 标题 */
         bs: '>.byBox>li', /* 内容 */
