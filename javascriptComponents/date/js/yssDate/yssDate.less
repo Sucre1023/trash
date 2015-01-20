@@ -1,0 +1,30 @@
+#yssDate {
+  width: 322px; background: #f8f8f8; border-radius: 4px;
+  position: absolute; z-index: 10; border: 1px solid #ccc; display: none;
+  .selectBox > :not(:nth-child(1)) {
+    border-left: 0;
+  }
+  .day-h, .monDay {
+    padding: 1px 0; overflow: hidden; margin: 0;
+  }
+  li {
+    list-style: none; float: left; width: 100% / 7;
+    text-align: center; line-height: 32px; transition: .5s background;
+  }
+  .monDay {
+    li:hover, li.active, li.autodate {
+      cursor: pointer;
+      border: 1px solid #2aabd2; margin: -1px 0;
+      position: relative; z-index: 1;
+    }
+    li.beck {
+      background: #e5e5e5; color: #999;
+    }
+    li.autodate {
+      background: #5bc0de; color: #fff;
+    }
+    li:hover {
+      background: #2aabd2; color: #fff;
+    }
+  }
+}
