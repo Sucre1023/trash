@@ -68,4 +68,4 @@ $.fn.tabMenu = function (opt) {
   return this;
 }
 
-})(window.jQuery || window.Zepto);
+})(window.jQuery);
