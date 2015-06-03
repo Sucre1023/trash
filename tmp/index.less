@@ -96,10 +96,10 @@ body{
 }
 .login{
     width: 310px; height: 314px;
-    padding: 18px 0 0 20px;
+    padding: 25px 0 0 20px;
     border-bottom: 1px solid #ececec;
     h1{
-        margin: 0 0 10px 0;
+        margin: 0 0 18px 0;
         color: #e67124;
         font: 24px/30px "微软雅黑";
         font-weight: normal;
@@ -107,38 +107,28 @@ body{
 }
 .veryeast-form{
     td{
-        width: 289px; height: 44px;
+        width: 289px; height: 54px;
         vertical-align: middle;
     }
     input{
-        font-size: 14px;
-        font-family: '微软雅黑';
-        width: 230px; height: 18px; line-height: 18px;
+        width: 230px; height: 24px; line-height: 24px;
+        padding: 10px 10px 10px 50px;
         border: none;
         outline: none;
-        border: 1px solid #dcddde;
-        border-radius: 3px;
-
-        &.login-name, &.login-pawd {
-            background: url(../images/formbg.gif) no-repeat;
-            padding: 7px 10px 7px 50px;
-        }
         &.login-name{
+            background: url(../images/namebg.gif) no-repeat;
             box-shadow: none;
         }
         &.login-name-cur{
-            background-position: 0 -80px;
+            background: url(../images/name-cur.gif) no-repeat;
             box-shadow: 0px 0px 6px #fff4e3;
-            border-color: #ffa00a;
         }
         &.login-pawd{
-            background-position: 0 -44px;
+            background: url(../images/password-bg.gif) no-repeat;
             box-shadow: none;
         }
         &.login-pawd-cur{
-            background-position: 0 -124px;
-            box-shadow: 0px 0px 6px #fff4e3;
-            border-color: #ffa00a;
+            background: url(../images/password-cur.gif) no-repeat;
         }
         &.login-auto{
             width: 16px; height: 16px;
@@ -146,29 +136,6 @@ body{
             margin: 0 4px 0 0; padding: 0;
             vertical-align: -4px;
         }
-        &.login-vcode {
-            padding: 7px 10px;
-            width: 108px;
-            &:focus {
-                box-shadow: 0px 0px 6px #fff4e3;
-                border-color: #ffa00a;
-            }
-        }
-    }
-    #vcode {
-        vertical-align: -11px;
-        _vertical-align: -2px;
-        width: 102px;
-        height: 32px;
-        margin: 0 3px;
-    }
-    .change-vcode {
-        display: inline-block;
-        width: 37px;
-        line-height: 14px;
-        font-size: 12px;
-        vertical-align: -6px;
-        _vertical-align: 2px;
     }
     label{
         display: block;
